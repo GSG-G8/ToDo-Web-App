@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { test } = require('../controllers');
-const { client, server } = require('../controllers/error');
+const { clientError, serverError } = require('../controllers/error');
 
 router.get('/test', test);
-router.use(client);
-router.use(server);
+router.use(clientError);
+router.use(serverError);
 
 module.exports = router;

@@ -1,15 +1,15 @@
-const path = require('path');
+const { join } = require('path');
 
-const client = (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, '..', '..', 'public', '404.html'));
+const clientError = (req, res) => {
+  res.status(404).sendFile(join(__dirname, '..', '..', 'public', '404.html'));
 };
 
-const server = (err, req, res, next) => {
-  res.status(500).send('<h1>500 Server Error</h1>');
+const serverError = (err, req, res, next) => {
+  res.status(500).json({ msg: 'server crashed' });
 };
 
 
 module.exports = {
-  client,
-  server,
+  clientError,
+  serverError,
 };
