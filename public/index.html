@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TodoList</title>
+</head>
+<body>
+  <header class="main-header">
+    <h1 class="main-header__h1">Organize it all with Todoist</h1>
+    <form class="main-header__login-form" action="/login" method="POST">
+      <label class="login-form__email-label" for="email"><b>Email:</b></label>
+      <input class="login-form__email-input" type="email" id="email" name="email" value="" placeholder="Email" required>
+      <label class="login-form__password-label" for="password"><b>Password:</b></label>
+      <input  class="login-form__password-input" type="password" id="password" name="password" value="" placeholder="password" required>
+      <input  class="login-form__login-btn" type="submit" name="button" value="Log In">
+        <div class="main-header__container">
+          <span class="container__span"><a href="#"> Forgot password?</a></span>
+          <label>
+            <input class="container__input" type="checkbox" checked="checked" name="remember"> Remember me 
+          </label>
+        </div>
+    </form>
+  </header>
+  <section class="section-signup">
+  <h2 class="section-signup__h2"> Create an account </h2>
+  <form class="section-signup__signup-form" action="/signUp" method="POST">
+      <label class="signup-form__fname-label" for="fname"><b>First Name</b></label>
+      <input class="signup-form__fname-input" type="text" placeholder="Enter Firstname" name="fname" required>
+      <label class="signup-form__lname-label" for="Lname"><b>Last Name</b></label>
+      <input class="signup-form__lname-input" type="text" placeholder="Enter Lastname" name="lname" required>
+      <label class="signup-form__email-label" for="email"><b>Email:</b></label>
+      <input class="signup-form__email-input" type="email" id="email" name="email" value="" placeholder="Email" required>
+      <label class="signup-form__newpass-label" for="psw"><b> New Password</b></label>
+      <input class="signup-form__newpass-input" type="password" placeholder="Enter New Password" name="psw" required>   
+      <input class="signup-form__signup-btn" type="submit" value="Sign Up">
+  </form>
+</section>
+<script src="./js/logic.js"></script>
+<script src="./js/dom.js"></script>
+</body>
+</html>
