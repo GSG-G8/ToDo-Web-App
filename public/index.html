@@ -14,11 +14,11 @@
       <input class="login-form__email-input" type="email" id="email" name="email" value="" placeholder="Email" required>
       <label class="login-form__password-label" for="password"><b>Password:</b></label>
       <input  class="login-form__password-input" type="password" id="password" name="password" value="" placeholder="password" required>
-      <button  class="login-form__login-but" type="submit" name="button"> Log In </button>
-        <div class="container">
-          <span class="psw"><a href="#"> Forgot password?</a></span>
+      <input  class="login-form__login-btn" type="submit" name="button" value="Log In">
+        <div class="main-header__container">
+          <span class="container__span"><a href="#"> Forgot password?</a></span>
           <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me 
+            <input class="container__input" type="checkbox" checked="checked" name="remember"> Remember me 
           </label>
         </div>
     </form>
@@ -34,7 +34,7 @@
       <input class="signup-form__email-input" type="email" id="email" name="email" value="" placeholder="Email" required>
       <label class="signup-form__newpass-label" for="psw"><b> New Password</b></label>
       <input class="signup-form__newpass-input" type="password" placeholder="Enter New Password" name="psw" required>   
-      <button class="signup-form__signup-put" type="submit">sign Up</button>
+      <input class="signup-form__signup-btn" type="submit" value="Sign Up">
   </form>
 </section>
 <script src="./js/logic.js"></script>
