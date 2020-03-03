@@ -3,13 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo Web App</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TodoList</title>
 </head>
 <body>
-  Server
+  <header>
+    <h1>Organize it all with Todoist</h1>
+    <form class="form" action="/login" method="post">
+      <label for="email"><b>Email:</b></label>
+      <input type="email" id="email" name="email" value="" placeholder="Email" required>
+      <label for="password"><b>Password:</b></label>
+      <input type="password" id="password" name="password" value="" placeholder="password" required>
+      <button type="submit" name="button"> Log In </button>
+        <div class="container">
+          <span class="psw"><a href="#"> Forgot password?</a></span>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me 
+          </label>
+        </div>
+    </form>
+  </header>
+  
+  <h2> Create an account </h2>
+  <form action="/signUp" method="post">
+    <div class="container">
+      <label for="fname"><b>First Name</b></label>
+      <input type="text" placeholder="Enter Firstname" name="fname" required>
+      <label for="Lname"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Lastname" name="lname" required>
+      <label for="email"><b>Email:</b></label>
+      <input type="email" id="email" name="email" value="" placeholder="Email" required>
+      <label for="psw"><b> New Password</b></label>
+      <input type="password" placeholder="Enter New Password" name="psw" required>   
+      <button type="submit">sign Up</button>
+    </div>
+  </form>
 
-  <script src="./js/logic.js"></script>
-  <script src="./js/dom.js"></script>
 </body>
 </html>
