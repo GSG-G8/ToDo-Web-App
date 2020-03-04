@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 
 const app = express();
-app.set('PORT', process.env.PORT || 3030);
+app.set('PORT', process.env.PORT || 5000);
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

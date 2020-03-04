@@ -2,4 +2,56 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+.main-header{
+  background-color: wheat;
+  color: white;
+  text-align: center;
+}
+.main-header__h1{
+  padding:20px 0px;
+}
+.login-form__email-input,.login-form__password-input{
+  width: 20%;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+.login-form__login-btn{
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: wheat;
+}
+.login-form__login-btn:hover{
+  background-color: tomato;
+  color: aliceblue;
+}
+
+.section-signup__h1{
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+.section-signup__signup-form{
+  text-align: center;
+}
+.signup-form__fname-input, .signup-form__lname-input,.signup-form__email-input,.signup-form__newpass-input{
+  width: 20%;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+.signup-form__signup-btn{
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: wheat;
+}
+.signup-form__signup-btn:hover{
+  background-color: tomato;
+  color: aliceblue;
 }
