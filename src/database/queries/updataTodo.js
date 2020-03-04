@@ -1,5 +1,7 @@
 const connection = require('../config/connection');
 
-const doneTodo = (id) => connection.query('update todos set done=true where user_id=$1', [id]);
+const doneTodo = (id, data) => {
+  connection.query('update todos set done=$1 where user_id=$2', [data, id]);
+};
 
 module.exports = doneTodo;
