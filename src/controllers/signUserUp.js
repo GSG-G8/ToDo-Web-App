@@ -11,5 +11,5 @@ module.exports = (req, res, next) => {
     };
     console.log(hashedPassword);
     rejesterNewUserQuery(newUser).then(() => { console.log('here'); res.json({ msg: 'signed up successfuly' }); });
-  }).catch(console.log);
+  }).catch(next);
 };
