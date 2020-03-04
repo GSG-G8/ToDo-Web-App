@@ -5,8 +5,9 @@ const connection = require('./connection');
 
 
 const dbBuild = () => {
-  const sql = readFileSync(join(__dirname, 'db_build.sql')).toString();
-  return connection.query(sql);
+  const sqlBuild = readFileSync(join(__dirname, 'build.sql')).toString();
+  const sqlInsertdata = readFileSync(join(__dirname, 'fake.sql')).toString();
+  return connection.query(sqlBuild + sqlInsertdata);
 };
 
 module.exports = { dbBuild };
