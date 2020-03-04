@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { test } = require('../controllers');
+const { validateSignUpData, checkNewUserExist, signUserUp } = require('../controllers');
 const { clientError, serverError } = require('../controllers/error');
 
-router.get('/test', test);
+router.post('/signUp', validateSignUpData, checkNewUserExist, signUserUp);
 router.use(clientError);
 router.use(serverError);
 
