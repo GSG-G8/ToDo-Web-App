@@ -1,14 +1,17 @@
 const router = require('express').Router();
-const login = require('../controllers/login');
+
 const {
-  validateSignUpData, checkNewUserExist, signUserUp, checkEmail,
+  validateSignUpData, checkNewUserExist, signUserUp, checkEmail, login, authorizeUser, getUserData,
 } = require('../controllers');
 
 const { clientError, serverError } = require('../controllers/error');
 
+
 router.post('/signUp', validateSignUpData, checkNewUserExist, signUserUp);
 
 router.post('/login', checkEmail, login);
+router.get('/login', authorizeUser, getUserData);
+
 
 router.use(clientError);
 router.use(serverError);
