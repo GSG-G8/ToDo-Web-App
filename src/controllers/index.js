@@ -1,4 +1,5 @@
-const test = (req, res) => {
-  res.send('hello from controller file');
-};
-module.exports = { test };
+const validateSignUpData = require('./validateUserSignUp');
+const checkNewUserExist = require('./checkNewUserExist');
+const signUserUp = require('./signUserUp');
+
+module.exports = { validateSignUpData, checkNewUserExist, signUserUp };
