@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todoist</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="./main-style.css">
 </head>
 <body>
-  <main class="wrapper">
-    <button class="wrapper__logout-btn">Log out</button>
-    <form id="add-todo" class="wrapper__form" action="">
-      <h2 class="wrapper__form__heading">What to do?</h2>
+  <header class="header">
+    <form action="logout" method="POST">
+      <button>log out</button>
+    </form>
+    <form id="add-todo" class="wrapper__form" action="addtodo" method="POST">
       <label for="todo-description" class="wrapper__form__label"
         >To-do description</label
       >
@@ -29,14 +31,15 @@
         class="wrapper__form__btn"
       />
     </form>
-    <div id="todo-container">
-      <h2 class="todo__heading">To-do</h2>
-      <ul></ul>
-      <h2 class="completed__heading">Completed</h2>
-    </div>
-    <script type="text/javascript" src="./js/logic.js"></script>
-    <script type="text/javascript" src="./js/dom.js"></script>
+  </header>
+  <main class="wrapper">
+    <section id="todo-container">
+    </section>
   </main>
+  <section class="finsh-container">
+  </section>
+  <script type="text/javascript" src="./js/logic.js"></script>
+  <script type="text/javascript" src="./js/dom.js"></script>
   <script>
   fetch('/login');
   </script>
