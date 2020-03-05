@@ -21,19 +21,22 @@
     </form>
   </header>
   <section class="section-signup">
-  <h1 class="section-signup__h1"> Create an account </h1>
-  <form class="section-signup__signup-form" action="/signUp" method="POST">
-      <label class="signup-form__fname-label" for="fname"><b>First Name</b></label>
+    <form class="section-signup__signup-form" action="/signUp" method="POST">
+      <h1 class="section-signup__h1"> Create an account </h1>
+      <label class="signup-form__fname-label" for="fname">First Name :</label><br>
       <input class="signup-form__fname-input" type="text" placeholder="Enter Firstname" name="fname" required><br>
-      <label class="signup-form__lname-label" for="Lname"><b>Last Name</b></label>
+      <label class="signup-form__lname-label" for="Lname">Last Name :</label><br>
       <input class="signup-form__lname-input" type="text" placeholder="Enter Lastname" name="lname" required><br>
-      <label class="signup-form__email-label" for="email"><b>Email:</b></label>
+      <label class="signup-form__email-label" for="email">Email:</label><br>
       <input class="signup-form__email-input" type="email" id="email" name="email" value="" placeholder="Email" required><br>
-      <label class="signup-form__newpass-label" for="psw"><b> New Password</b></label>
+      <label class="signup-form__newpass-label" for="psw"> New Password :</label><br>
       <input class="signup-form__newpass-input" type="password" placeholder="Enter New Password" name="psw" required> <br>  
       <input class="signup-form__signup-btn" type="submit" value="Sign Up">
   </form>
 </section>
+<footer class="footer">
+  <span class="footer__span">&copy;Todoist 2020</span>
+</footer>
 <script src="./js/logic.js"></script>
 <script src="./js/dom.js"></script>
 </body>
