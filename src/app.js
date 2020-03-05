@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get(['/', '/main.html'], authorizeUser, (req, res, next) => {
+app.get(['/', '/main.html'], authorizeUser, (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'main.html'));
 });
 
