@@ -15,7 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get(['/', '/main.html'], authorizeUser, (req, res, next) => {
   res.sendFile(join(__dirname, '..', 'public', 'main.html'));
-  next();
 });
 
 app.use(express.static(join(__dirname, '..', 'public')));
