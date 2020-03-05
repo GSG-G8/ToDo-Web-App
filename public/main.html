@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todoist</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./main-style.css">
 </head>
 <body>
   <main class="wrapper">
-    <button class="wrapper__logout-btn">Log out</button>
+    <form action="logout" method="POST">
+      <button>log out</button>
+    </form>
     <form id="add-todo" class="wrapper__form" action="">
       <h2 class="wrapper__form__heading">What to do?</h2>
       <label for="todo-description" class="wrapper__form__label"
@@ -38,7 +40,7 @@
     <script type="text/javascript" src="./js/dom.js"></script>
   </main>
   <script>
-  fetch('/login');
+  fetch('/login').then(console.log).catch(console.log)
   </script>
 </body>
 </html>
