@@ -6,6 +6,9 @@ const checkEmail = require('./checkExist ');
 const login = require('./login');
 const authorizeUser = require('./authorizeUser');
 const getUserData = require('./getUserData');
+const addtodo = require('./addTodo');
+const updateDone = require('./updateDone');
+const deleteTodo = require('./deleteTodo');
 
 module.exports = {
   validateSignUpData,
@@ -16,4 +19,7 @@ module.exports = {
   login,
   authorizeUser,
   getUserData,
+  addtodo,
+  updateDone,
+  deleteTodo,
 };
