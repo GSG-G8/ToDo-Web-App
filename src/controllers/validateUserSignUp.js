@@ -18,6 +18,7 @@ module.exports = (req, res, next) => {
   if (error) {
     error.status = 400;
     error.msg = 'invalide input';
+    next(error);
   } else {
     next();
   }

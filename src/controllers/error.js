@@ -5,7 +5,7 @@ const clientError = (req, res) => {
 };
 
 const serverError = (err, req, res, next) => {
-  res.status(500).json({ msg: err.message });
+  res.status(err.status || 500).json({ msg: err.msg, status: err.status });
 };
 
 
