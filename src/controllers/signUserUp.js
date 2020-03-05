@@ -8,6 +8,6 @@ module.exports = (req, res, next) => {
       email: req.body.email,
       password: hashedPassword,
     };
-    rejesterNewUserQuery(newUser).then(() => res.json({ msg: 'signed up successfuly' }));
+    rejesterNewUserQuery(newUser).then(() => res.json({ msg: 'signed up successfuly' })).catch(next);
   }).catch(next);
 };

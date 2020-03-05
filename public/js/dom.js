@@ -56,7 +56,7 @@ const getData = () => {
         renderData(todo);
       });
     })
-    .catch((err) => { console.log('from fetch', err); });
+    .catch((err) => err);
 };
 getData();
 

@@ -18,7 +18,10 @@ const login = (req, res, next) => {
           });
         });
       } else {
-        res.join({ msg: 'user name or password incorrect' });
+        const err = new Error();
+        err.msg = 'incorect password';
+        err.status = '401';
+        next(err);
       }
     })
     .catch((err) => next(err));

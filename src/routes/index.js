@@ -15,7 +15,6 @@ const {
   deleteTodo,
 } = require('../controllers');
 
-
 router.get('/login', authorizeUser, getUserData);
 router.post('/signUp', validateSignUpData, checkNewUserExist, signUserUp);
 router.post('/login', validateLogin, checkEmail, login);
